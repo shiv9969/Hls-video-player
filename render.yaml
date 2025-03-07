@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hls-player
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 10000
